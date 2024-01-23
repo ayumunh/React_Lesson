@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSXTest</title>
+  </head>
+  <body>
+    <div id="test"></div>
+    <!-- 引入依赖 ,引入的时候，必须就按照这个步骤-->
+  </body>
+  <script
+    src="../React-js/react.development.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="../React-js/react-dom.development.js"
+    type="text/javascript"
+  ></script>
+  <script type="text/javascript" src="../React-js/babel.min.js"></script>
+
+  <script type="text/babel">
+    const myId = "aTgUiGu";
+    const myData = "HeLlo, react";
+    const VDOM = (
+      <h2 id="atguigu">
+        <span>hello,react</span>
+      </h2>
+    );
+    ReactDom.render(VDOM, document.getElementById("test"));
+  </script>
+</html>
