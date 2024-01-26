@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .title {
+        background-color: orange;
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
     <!-- 准备好容器 -->
@@ -28,9 +34,12 @@
     // 1.创建虚拟DOM
     // const VDOM = <h1>Hello, React!!!!!!</h1>; //不需要加""
     const VDOM = (
-      <h2 id={myId}>
-        <span>{myData}</span>
-      </h2>
+      <div>
+        <h2 className="title" id={myId}>
+          <span style={{ color: "blue", fontSize: "30px" }}>{myData}</span>
+        </h2>
+        <input type="text" />
+      </div>
     );
     // 2.渲染，如果有多个渲染同一个容器，后面的会将前面的覆盖掉
     ReactDOM.render(VDOM, document.getElementById("test"));
